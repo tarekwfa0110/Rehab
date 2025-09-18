@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Let's Rehab</title>
+</head>
+
+<body>
+    <h1>The Rehab project</h1>
+    <p>This project should help cleaning up the mind from AI.</p>
+    <a href="https://github.com/tarekwfa0110/rehab">Github</a>
+    <br />
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+        <input type="submit" value="Submit" />
+    </form>
+    <p id="yourName">Your name is </p>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.querySelector('input[name="name"]').value;
+            document.querySelector('#yourName').innerHTML = `Your name is ${name}`;
+        });
+    </script>
+
+</body>
+</html>
